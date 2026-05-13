@@ -314,6 +314,7 @@ GameObject:
   - component: {fileID: 246439099}
   - component: {fileID: 246439101}
   - component: {fileID: 246439103}
+  - component: {fileID: 246439104}
   m_Layer: 0
   m_Name: GolemSword
   m_TagString: Mob
@@ -467,6 +468,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &246439104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246439098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1afe5df9783996a4881b0b0ac0f88ba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Damage
+  damage: 20
 --- !u!1001 &374725649
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -477,7 +491,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3625266076172339874, guid: 14497f550ea2ded40a908ff3df92afbc, type: 3}
       propertyPath: m_LocalScale.y
-      value: 22.3514
+      value: 21.9379
       objectReference: {fileID: 0}
     - target: {fileID: 3625266076172339874, guid: 14497f550ea2ded40a908ff3df92afbc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -485,7 +499,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3625266076172339874, guid: 14497f550ea2ded40a908ff3df92afbc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.935
+      value: 4.7287
       objectReference: {fileID: 0}
     - target: {fileID: 3625266076172339874, guid: 14497f550ea2ded40a908ff3df92afbc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -852,8 +866,8 @@ GameObject:
   - component: {fileID: 575420886}
   - component: {fileID: 575420885}
   - component: {fileID: 575420884}
-  - component: {fileID: 575420883}
   - component: {fileID: 575420882}
+  - component: {fileID: 575420890}
   m_Layer: 0
   m_Name: VvMaster
   m_TagString: Player
@@ -891,21 +905,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &575420883
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 575420881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcafa159621e334d8b027db922c42dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HealthManager1
-  maxHealth: 100
-  currentHealth: 0
-  healthBar: {fileID: 1840322942}
 --- !u!114 &575420884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1087,6 +1086,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &575420890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575420881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcafa159621e334d8b027db922c42dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Health
+  health: 0
+  maxHealth: 100
+  slider: {fileID: 1840322943}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1626,9 +1640,9 @@ RectTransform:
   - {fileID: 1166924177}
   m_Father: {fileID: 1758902954}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -689, y: 212}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 82.5, y: -46.1}
   m_SizeDelta: {x: 80.49707, y: 13.571411}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1840322942
