@@ -6,6 +6,7 @@ public class Health : MonoBehaviour
     public int health;
     public int maxHealth = 100;
     public Slider slider;
+    private PlayerRespawn playerRespawn;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -13,6 +14,7 @@ public class Health : MonoBehaviour
         health = maxHealth;
         slider.maxValue = maxHealth;
         slider.value = health;
+        playerRespawn = GameObject.Find("VvMaster").GetComponent<PlayerRespawn>();
     }
 
     // Update is called once per frame
@@ -29,7 +31,7 @@ public class Health : MonoBehaviour
 
         if(health <= 0)
         {
-            Destroy(gameObject);
+            playerRespawn.RespawnNow();
         }
     }
 }

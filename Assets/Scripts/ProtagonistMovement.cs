@@ -13,6 +13,7 @@ public class ProtagonistMovement : MonoBehaviour
     public LayerMask mask; //Quels layer seront affecté par le raycast attention a ne pas ajouter le layer de votre perso sinon le raycast va trouver le perso avant de trouver le sol
     public bool isGrounded;
     public bool isDashing;
+    public ListSkill comp;
     public void Update()
     {
         var hDirection = 0f;
@@ -43,8 +44,12 @@ public class ProtagonistMovement : MonoBehaviour
 
     public void Dash()
     {
-        rb.AddForceX(rb.linearVelocity.x*dashSpeed);
-        StartCoroutine(DashRoutine());
+        if (comp.skill[0])
+        {
+            rb.AddForceX(rb.linearVelocity.x*dashSpeed);
+            StartCoroutine(DashRoutine());
+        }
+        
     }
 
     private IEnumerator DashRoutine()
