@@ -1004,7 +1004,7 @@ MonoBehaviour:
     m_Bits: 8
   isGrounded: 0
   isDashing: 0
-  comp: {fileID: 0}
+  comp: {fileID: 575420894}
 --- !u!50 &575420886
 Rigidbody2D:
   serializedVersion: 5
@@ -1202,6 +1202,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ListSkill
   skill: 00000000000000
+  cooldown:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  attack: {fileID: 575420891}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0

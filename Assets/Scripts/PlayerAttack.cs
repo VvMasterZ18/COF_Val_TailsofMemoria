@@ -17,18 +17,18 @@ public class PlayerAttack : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            Attack();
+            Attack(attackDamage, attackRange);
         }
         
     }
 
-    void Attack()
+    public void Attack(int damage, float range)
     {
-        Collider2D[] hitEnnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayer);
+        Collider2D[] hitEnnemies = Physics2D.OverlapCircleAll(attackPoint.position, range, enemyLayer);
 
         foreach(Collider2D enemy in hitEnnemies)
         {
-            enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
+            enemy.GetComponent<Enemy>().TakeDamage(damage);
         }
     }
 
