@@ -317,7 +317,7 @@ GameObject:
   - component: {fileID: 246439104}
   - component: {fileID: 246439105}
   m_Layer: 6
-  m_Name: GolemSword
+  m_Name: Enemy
   m_TagString: Mob
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -495,6 +495,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   maxHealth: 100
+  currentHealth: 0
   power: 0
   skill: {fileID: 575420894}
 --- !u!1001 &374725649
@@ -1209,6 +1210,7 @@ MonoBehaviour:
   - 0
   - 0
   attack: {fileID: 575420891}
+  projectile: {fileID: 4018689696404743833, guid: 0558f3ef75fa9e84a96dd39e5d20f94d, type: 3}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0

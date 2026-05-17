@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public int maxHealth = 100;
-    int currentHealth;
+    public float maxHealth = 100;
+    public float currentHealth;
     public int power;
     public ListSkill skill;
 
@@ -14,11 +14,11 @@ public class Enemy : MonoBehaviour
 
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         currentHealth -= damage;
 
-        if (currentHealth <= 0)
+        if (currentHealth <= 0f)
         {
             Die();
         }
