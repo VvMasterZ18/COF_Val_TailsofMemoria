@@ -10,6 +10,7 @@ public class ListSkill : MonoBehaviour
     public GameObject projectile;
     public float jump;
     public Rigidbody2D rb;
+    public ProtagonistMovement pm;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -50,16 +51,17 @@ public class ListSkill : MonoBehaviour
             cooldown[3] = 12;
             proj.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
         }
-        if (Input.GetKeyDown(KeyCode.Space) & skill[6])
+        if (Input.GetKey(KeyCode.Space) & skill[6])
         {
             if (jump < 2)
             {
                 jump += Time.deltaTime;
             }
-        }
-        if (jump > 0 & !Input.GetKeyDown(KeyCode.Space))
+        }          
+
+        if (jump > 0 & Input.GetKeyUp(KeyCode.Space) & pm.CheckGround())
         {
-            rb.linearVelocity = new Vector3(0, jump, 0);
+            rb.linearVelocity = new Vector3(0, ((jump/3)+1)*8, 0);
             jump = 0;
         }
     }

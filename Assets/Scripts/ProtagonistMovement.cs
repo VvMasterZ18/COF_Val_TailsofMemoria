@@ -21,7 +21,7 @@ public class ProtagonistMovement : MonoBehaviour
         isGrounded = CheckGround();
         if (isGrounded)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) & !comp.skill[6])
             {
                 vDirection += jumpforce;
             }
