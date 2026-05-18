@@ -1211,6 +1211,8 @@ MonoBehaviour:
   - 0
   attack: {fileID: 575420891}
   projectile: {fileID: 4018689696404743833, guid: 0558f3ef75fa9e84a96dd39e5d20f94d, type: 3}
+  jump: 0
+  rb: {fileID: 575420886}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
