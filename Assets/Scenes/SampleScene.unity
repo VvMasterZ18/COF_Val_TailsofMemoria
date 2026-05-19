@@ -316,6 +316,7 @@ GameObject:
   - component: {fileID: 246439103}
   - component: {fileID: 246439104}
   - component: {fileID: 246439105}
+  - component: {fileID: 246439106}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Mob
@@ -391,7 +392,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 25.36, y: -2.58, z: 0}
-  m_LocalScale: {x: 2.4978, y: 3.5982, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -498,6 +499,22 @@ MonoBehaviour:
   currentHealth: 0
   power: 0
   skill: {fileID: 575420894}
+--- !u!114 &246439106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246439098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb3faecd3065d248b8a71d7c1a79b7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
+  playerTransform: {fileID: 575420889}
+  moveSpeed: 2
+  isChasing: 0
+  chaseDistance: 10
 --- !u!1001 &374725649
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1679,7 +1696,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3625266076172339874, guid: 14497f550ea2ded40a908ff3df92afbc, type: 3}
       propertyPath: m_LocalScale.y
-      value: 8.3938
+      value: 8.90613
       objectReference: {fileID: 0}
     - target: {fileID: 3625266076172339874, guid: 14497f550ea2ded40a908ff3df92afbc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1687,7 +1704,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3625266076172339874, guid: 14497f550ea2ded40a908ff3df92afbc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.4995003
+      value: 3.8863
       objectReference: {fileID: 0}
     - target: {fileID: 3625266076172339874, guid: 14497f550ea2ded40a908ff3df92afbc, type: 3}
       propertyPath: m_LocalPosition.z
