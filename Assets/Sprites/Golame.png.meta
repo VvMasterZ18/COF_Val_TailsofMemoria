@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3d9d6de413eae5e4886367bc2bb39738
+guid: 69ed3c5d29504ca48aa174e454754baf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3994359559424017066
-    second: VvMaster2_0
+      213: 101934791620045339
+    second: Golame_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: VvMaster2_0
+      name: Golame_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 68
-        height: 122
+        width: 162
+        height: 167
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 65d785bc42f2198c0800000000000000
-      internalID: -3994359559424017066
+      spriteID: b1a24c427252a6100800000000000000
+      internalID: 101934791620045339
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      VvMaster2_0: -3994359559424017066
+      Golame_0: 101934791620045339
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

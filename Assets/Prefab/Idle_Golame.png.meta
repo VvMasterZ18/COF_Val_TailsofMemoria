@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 9c2acbef24034734395985f93d28a611
+guid: f7e782155222fd94a810aa9ba4755ae0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1866430558801236865
-    second: PlateformeTemple_0
+      213: 189268816539253924
+    second: Idle_Golame_0
+  - first:
+      213: 8171174854641674247
+    second: Idle_Golame_1
+  - first:
+      213: -8923055499389448728
+    second: Idle_Golame_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 170
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +81,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,23 +106,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlateformeTemple_0
+      name: Idle_Golame_0
       rect:
         serializedVersion: 2
-        x: 203
-        y: 121
-        width: 110
-        height: 13
+        x: 0
+        y: 0
+        width: 163
+        height: 167
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f7ce7b8ab4b1916e0800000000000000
-      internalID: -1866430558801236865
+      spriteID: 4ac71e06cfa60a200800000000000000
+      internalID: 189268816539253924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Golame_1
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 0
+        width: 163
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7086580dc38d56170800000000000000
+      internalID: 8171174854641674247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Golame_2
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 0
+        width: 163
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8edcbc7bc40fa2480800000000000000
+      internalID: -8923055499389448728
       vertices: []
       indices: 
       edges: []
@@ -125,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 418af2e8149a03745ae5af546fa04f47
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      PlateformeTemple_0: -1866430558801236865
+      Idle_Golame_0: 189268816539253924
+      Idle_Golame_1: 8171174854641674247
+      Idle_Golame_2: -8923055499389448728
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
