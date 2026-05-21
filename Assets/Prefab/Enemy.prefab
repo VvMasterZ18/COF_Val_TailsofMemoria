@@ -200,7 +200,7 @@ MonoBehaviour:
   power: 0
   skill: {fileID: 0}
   diff: 0
-  anim: {fileID: 0}
+  anim: {fileID: 8836268218151296896}
 --- !u!114 &7456386287669173915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,8 +217,9 @@ MonoBehaviour:
   moveSpeed: 2
   isChasing: 0
   chaseDistance: 10
-  dp: {fileID: 0}
-  enemy: {fileID: 0}
+  dp: {fileID: 4847718927070629332}
+  enemy: {fileID: 8396373266330889804}
+  targetPlayer: {fileID: 553991472160899256}
 --- !u!95 &8836268218151296896
 Animator:
   serializedVersion: 7
@@ -252,6 +253,8 @@ GameObject:
   - component: {fileID: 3411814793560500654}
   - component: {fileID: 4484860048238168615}
   - component: {fileID: 4847718927070629332}
+  - component: {fileID: 553991472160899256}
+  - component: {fileID: 2777505143333788333}
   m_Layer: 6
   m_Name: GameObject
   m_TagString: Untagged
@@ -323,3 +326,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DetectPlayer
   player: {fileID: 0}
+--- !u!114 &553991472160899256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6024699505135525846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea1dbea1be54ca8448e8c7e400b146ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TargetPlayer
+  rb: {fileID: 2777505143333788333}
+  cible: {fileID: 0}
+  distance: 0
+  attack: {fileID: 6661869711337629604, guid: 57681a613645e094d954f62a3e9de0cb, type: 3}
+  cd: 0
+--- !u!50 &2777505143333788333
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6024699505135525846}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

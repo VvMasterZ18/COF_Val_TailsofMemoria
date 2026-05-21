@@ -1,5 +1,6 @@
 using System.Collections;
 using JetBrains.Annotations;
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -14,6 +15,7 @@ public class ProtagonistMovement : MonoBehaviour
     public bool isGrounded;
     public bool isDashing;
     public ListSkill comp;
+    public Animator anim;
     public void Update()
     {
         var hDirection = 0f;
@@ -23,21 +25,36 @@ public class ProtagonistMovement : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space) & !comp.skill[6])
             {
-                print("Saut");
                 vDirection += jumpforce;
+                anim.SetBool("Jump", true);
+            }
+            else
+            {
+                anim.SetBool("Jump", false);
             }
         }
 
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             hDirection += -1;
+            transform.localScale = new Vector3(-2.6f, 2.6f, 1);
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
             hDirection += 1;
+            transform.localScale = new Vector3(2.6f, 2.6f, 1);
+        }
+        if (Input.GetKey(KeyCode.LeftArrow)| Input.GetKey(KeyCode.RightArrow))
+        {
+            anim.SetBool("Run", true);
+        }
+        else
+        {
+            anim.SetBool("Run", false);
         }
 
-        if(!isDashing)
+
+        if (!isDashing)
         {
             rb.linearVelocity = new Vector2(hDirection * speed, rb.linearVelocityY + vDirection); //On set up la velocité horizontal 
         }

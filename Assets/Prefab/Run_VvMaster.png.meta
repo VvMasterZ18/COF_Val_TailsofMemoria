@@ -1,16 +1,22 @@
 fileFormatVersion: 2
-guid: 83da6e2d1f1838b4c954657253f4f972
+guid: b77544e0211dc6f41896089dabec9070
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8475369342229348650
-    second: Anim_Idle_Vv_0
+      213: -427973236884785024
+    second: Run_VvMaster_0
   - first:
-      213: 2010886322996842706
-    second: Anim_Idle_Vv_1
+      213: 6923778750014056986
+    second: Run_VvMaster_1
   - first:
-      213: -1186395084032965898
-    second: Anim_Idle_Vv_2
+      213: -6938840973287938906
+    second: Run_VvMaster_2
+  - first:
+      213: 7003330654366432630
+    second: Run_VvMaster_3
+  - first:
+      213: 649663494393510973
+    second: Run_VvMaster_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -57,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 124
+  spritePixelsToUnits: 128
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -106,67 +112,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Anim_Idle_Vv_0
+      name: Run_VvMaster_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 69
-        height: 122
+        height: 123
       alignment: 9
-      pivot: {x: 0.76770914, y: 0.5069883}
+      pivot: {x: 0.73377025, y: 0.5140052}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6defe28dc70716a80800000000000000
-      internalID: -8475369342229348650
+      spriteID: 088bb1acb988f0af0800000000000000
+      internalID: -427973236884785024
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Anim_Idle_Vv_1
+      name: Run_VvMaster_1
       rect:
         serializedVersion: 2
-        x: 89
+        x: 82
         y: 0
-        width: 54
+        width: 106
         height: 122
       alignment: 9
-      pivot: {x: 0.7052436, y: 0.50698835}
+      pivot: {x: 0.7142217, y: 0.50770175}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2d01be5e47a18eb10800000000000000
-      internalID: 2010886322996842706
+      spriteID: a1a6cf1e614361060800000000000000
+      internalID: 6923778750014056986
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Anim_Idle_Vv_2
+      name: Run_VvMaster_2
       rect:
         serializedVersion: 2
-        x: 171
+        x: 198
         y: 0
-        width: 51
-        height: 122
+        width: 133
+        height: 127
       alignment: 9
-      pivot: {x: 0.60865843, y: 0.5069882}
+      pivot: {x: 0.77552783, y: 0.51726335}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6f202f4f4f3198fe0800000000000000
-      internalID: -1186395084032965898
+      spriteID: 6a42f3af5e844bf90800000000000000
+      internalID: -6938840973287938906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_VvMaster_3
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 0
+        width: 130
+        height: 128
+      alignment: 9
+      pivot: {x: 0.768635, y: 0.52569276}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67d7d1aff14d03160800000000000000
+      internalID: 7003330654366432630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_VvMaster_4
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 1
+        width: 132
+        height: 127
+      alignment: 9
+      pivot: {x: 0.77863795, y: 0.5135753}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3c3dde8181140900800000000000000
+      internalID: 649663494393510973
       vertices: []
       indices: 
       edges: []
@@ -175,7 +225,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 4a86b2db70fb96a44a4f38984912a941
+    spriteID: d4a1bcba23bad6448998f2cd5b62e46f
     internalID: 0
     vertices: []
     indices: 
@@ -185,9 +235,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Anim_Idle_Vv_0: -8475369342229348650
-      Anim_Idle_Vv_1: 2010886322996842706
-      Anim_Idle_Vv_2: -1186395084032965898
+      Run_VvMaster_0: -427973236884785024
+      Run_VvMaster_1: 6923778750014056986
+      Run_VvMaster_2: -6938840973287938906
+      Run_VvMaster_3: 7003330654366432630
+      Run_VvMaster_4: 649663494393510973
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

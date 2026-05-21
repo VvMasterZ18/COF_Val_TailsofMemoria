@@ -9,6 +9,7 @@ public class EnemyMovement : MonoBehaviour
     public float chaseDistance;
     public DetectPlayer dp;
     public Enemy enemy;
+    public TargetPlayer targetPlayer;
 
     // Update is called once per frame
     void Update()
@@ -45,15 +46,16 @@ public class EnemyMovement : MonoBehaviour
                              * (transform.position.y - dp.player.transform.position.y)));
             if (distance >5)
             {
-                transform.position += new Vector3((transform.position.x - dp.player.transform.position.x), (transform.position.y - dp.player.transform.position.y), 0) * Time.deltaTime * moveSpeed;
+                transform.position += new Vector3((transform.position.x - dp.player.transform.position.x), (transform.position.y - dp.player.transform.position.y), 0) * Time.deltaTime * -moveSpeed * 0.1f;
             }
             else if(distance < 2)
             {
-                transform.position += new Vector3((transform.position.x - dp.player.transform.position.x), (transform.position.y - dp.player.transform.position.y), 0) * Time.deltaTime * -moveSpeed;
+                transform.position += new Vector3((transform.position.x - dp.player.transform.position.x), (transform.position.y - dp.player.transform.position.y), 0) * Time.deltaTime * moveSpeed* 0.1f;
             }
             else
             {
-
+                targetPlayer.cible = playerTransform;
+                targetPlayer.distance = true;
             }
         }
     }
