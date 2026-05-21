@@ -6,11 +6,14 @@ public class Enemy : MonoBehaviour
     public float currentHealth;
     public int power;
     public ListSkill skill;
+    public int diff;
+    public Animator anim;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         currentHealth = maxHealth;
+        anim.SetFloat("diff", diff);
 
     }
 

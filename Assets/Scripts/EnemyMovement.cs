@@ -7,29 +7,53 @@ public class EnemyMovement : MonoBehaviour
     public float moveSpeed;
     public bool isChasing;
     public float chaseDistance;
+    public DetectPlayer dp;
+    public Enemy enemy;
 
     // Update is called once per frame
     void Update()
     {
-        if (isChasing)
+        if (enemy.diff != 1)
         {
-            if(transform.position.x > playerTransform.position.x)
+            if (isChasing)
             {
-                transform.localScale = new Vector3(3.85f, 4, 1);
-                transform.position += Vector3.left * moveSpeed * Time.deltaTime;
+                if (transform.position.x > playerTransform.position.x)
+                {
+                    transform.localScale = new Vector3(3.85f, 4, 1);
+                    transform.position += Vector3.left * moveSpeed * Time.deltaTime;
+                }
+                if (transform.position.x < playerTransform.position.x)
+                {
+                    transform.localScale = new Vector3(-3.85f, 4, 1);
+                    transform.position += Vector3.right * moveSpeed * Time.deltaTime;
+                }
             }
-            if(transform.position.x < playerTransform.position.x)
+
+            else
             {
-                transform.localScale = new Vector3(-3.85f, 4, 1);
-                transform.position += Vector3.right * moveSpeed * Time.deltaTime;
+                if (Vector2.Distance(transform.position, playerTransform.position) < chaseDistance)
+                {
+                    isChasing = true;
+                }
             }
         }
-
-        else
+        else if (dp.player != null) 
         {
-            if(Vector2.Distance(transform.position, playerTransform.position) < chaseDistance)
+            var distance = Mathf.Sqrt(((transform.position.x - dp.player.transform.position.x)
+                             * (transform.position.x - dp.player.transform.position.x))
+                             - ((transform.position.y - dp.player.transform.position.y)
+                             * (transform.position.y - dp.player.transform.position.y)));
+            if (distance >5)
             {
-                isChasing = true;
+                transform.position += new Vector3((transform.position.x - dp.player.transform.position.x), (transform.position.y - dp.player.transform.position.y), 0) * Time.deltaTime * moveSpeed;
+            }
+            else if(distance < 2)
+            {
+                transform.position += new Vector3((transform.position.x - dp.player.transform.position.x), (transform.position.y - dp.player.transform.position.y), 0) * Time.deltaTime * -moveSpeed;
+            }
+            else
+            {
+
             }
         }
     }

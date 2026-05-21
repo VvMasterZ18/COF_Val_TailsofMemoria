@@ -23,6 +23,7 @@ public class ProtagonistMovement : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space) & !comp.skill[6])
             {
+                print("Saut");
                 vDirection += jumpforce;
             }
         }
@@ -62,11 +63,12 @@ public class ProtagonistMovement : MonoBehaviour
 
     public bool CheckGround()
     {
-        var rayCastHit = Physics2D.Raycast(transform.position, new Vector2(0, -1), 1.1f, mask);
+        Debug.DrawLine(transform.position, transform.position + new Vector3(0, -1) * 1.65f);
+        var rayCastHit = Physics2D.Raycast(transform.position, new Vector2(0, -1), 1.65f, mask);
         if (rayCastHit)
         {
             return true;
-        }
+        }        
         return false;
     }
 }
